@@ -44,10 +44,8 @@ def test_profile_generates_svg(pytestconfig, virtualenv):
         cd=virtualenv.workspace,
     )
     assert any(
-        [
-            "test_example:1:test_foo" in i
+        "test_example:1:test_foo" in i
             for i in (virtualenv.workspace / "prof/combined.svg").lines()
-        ]
     )
 
     assert "test_example.py:1(test_foo)" in output
