@@ -1,6 +1,5 @@
-from mock import Mock, sentinel, patch
+from mock import Mock, sentinel
 import pytest
-import selenium
 
 import pytest_webdriver
 

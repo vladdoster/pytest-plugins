@@ -5,7 +5,6 @@ import time
 from itertools import chain, repeat
 
 from mock import patch
-import pytest
 from pytest import raises
 
 from pytest_server_fixtures.xvfb import XvfbServer

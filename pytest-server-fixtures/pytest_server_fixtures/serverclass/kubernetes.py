@@ -5,7 +5,6 @@ from __future__ import absolute_import
 
 import os
 import logging
-import uuid
 
 from kubernetes import config
 from kubernetes import client as k8sclient

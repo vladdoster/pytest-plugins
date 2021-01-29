@@ -1,4 +1,4 @@
-from mock import sentinel, patch, Mock
+from mock import sentinel, patch
 
 from pytest_server_fixtures.serverclass.docker import DockerServer
 

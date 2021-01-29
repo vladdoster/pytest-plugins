@@ -1,8 +1,5 @@
-from mock import Mock, sentinel, patch
+from mock import Mock
 import pytest
-import selenium
-
-import pytest_webdriver
 
 @pytest.fixture()
 def pyramid_server():

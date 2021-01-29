@@ -1,4 +1,3 @@
-import pytest
 
 def test_postgres_server(postgres_server_sess):
     conn = postgres_server_sess.connect('integration')

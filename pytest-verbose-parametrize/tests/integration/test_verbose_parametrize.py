@@ -1,6 +1,5 @@
 import sys
 import os
-from distutils.dir_util import copy_tree
 
 from pkg_resources import resource_filename  # @UnresolvedImport
 from pytest_shutil.run import run_with_coverage
