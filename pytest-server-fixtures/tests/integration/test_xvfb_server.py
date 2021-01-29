@@ -53,7 +53,7 @@ def test_handles_unexpected_server_num_collision():
         from os.path import exists as real_exists
         with patch('os.path.exists') as mock_exists:
             side_effect_chain = chain([lambda _: False], repeat(real_exists))
-            mock_exists.side_effect = lambda path: next(side_effect_chain)(path)
+            mock_exists.side_effect = next(side_effect_chain)
             with XvfbServer() as server2:
                 assert server1.display != server2.display
 
