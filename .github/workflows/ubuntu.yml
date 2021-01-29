@@ -1,7 +1,9 @@
 name: Ubuntu
 
-on: [pull_request, push]
-
+on:
+  push:
+    branches: 
+      - consolidate-ci
 jobs:
   build:
 
