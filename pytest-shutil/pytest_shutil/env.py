@@ -26,7 +26,7 @@ def set_env(*args, **kwargs):
     new_values.update((k, v) for k, v in kwargs.items())
 
     # Save variables that are going to be updated.
-    saved_values = dict((k, os.environ.get(k)) for k in new_values.keys())
+    saved_values = {k: os.environ.get(k) for k in new_values.keys()}
 
     # Update variables to their temporary values
     try:
@@ -50,7 +50,7 @@ def unset_env(env_var_skiplist):
     # Save variables that are going to be updated.
     saved_values = dict(os.environ)
 
-    new_values = dict((k, v) for k, v in os.environ.items() if k not in env_var_skiplist)
+    new_values = {k: v for k, v in os.environ.items() if k not in env_var_skiplist}
 
     # Update variables to their temporary values
     update_environment(new_values)
