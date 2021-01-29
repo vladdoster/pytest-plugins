@@ -66,8 +66,7 @@ class XvfbServer(object):
                         err = f.read()
                     if 'Server is already active for display' in err:
                         continue
-                    else:
-                        raise RuntimeError('Failed to start Xvfb', p.returncode, err)
+                    raise RuntimeError('Failed to start Xvfb', p.returncode, err)
             print('Xvfb started in ' + tmpdir)  # for debugging
             self.process = p
             # If we terminate abnormally, ensure the Xvfb server is cleaned up after us.
