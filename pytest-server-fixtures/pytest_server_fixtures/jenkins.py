@@ -89,8 +89,8 @@ class JenkinsTestServer(HTTPTestServer):
             raise ValueError('Plugin repository "%s" does not exist' % plugins_repo)
 
         # copy the plugins to the jenkins plugin directory
-        available_plugins = dict(((os.path.splitext(os.path.basename(x))[0], os.path.join(plugins_repo, x))
-                                  for x in os.listdir(plugins_repo) if x.endswith('.hpi')))
+        available_plugins = {os.path.splitext(os.path.basename(x))[0]: os.path.join(plugins_repo, x)
+                                  for x in os.listdir(plugins_repo) if x.endswith('.hpi')}
 
         if plugins is None:
             plugins = available_plugins.keys()
