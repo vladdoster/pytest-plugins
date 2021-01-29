@@ -1,6 +1,4 @@
-from mock import sentinel, patch, Mock
-
-from pytest_server_fixtures import CONFIG
+from mock import sentinel, patch
 from pytest_server_fixtures.serverclass.thread import ThreadServer
 
 

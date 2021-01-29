@@ -5,7 +5,6 @@ Created on 25 Apr 2012
 
 '''
 from __future__ import absolute_import
-import socket
 
 import pytest
 

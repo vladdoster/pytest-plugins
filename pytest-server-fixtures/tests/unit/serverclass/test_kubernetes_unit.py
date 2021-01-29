@@ -1,6 +1,6 @@
 import pytest
 
-from mock import sentinel, patch, Mock
+from mock import sentinel, patch
 
 from pytest_server_fixtures.serverclass.kubernetes import KubernetesServer
 

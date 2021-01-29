@@ -2,16 +2,12 @@
 Thread server class implementation
 """
 import logging
-import os
 import signal
 import subprocess
 import traceback
-import time
 import psutil
 
 from retry import retry
-
-from pytest_server_fixtures import CONFIG
 from pytest_server_fixtures.base import ProcessReader
 from .common import ServerClass, is_debug
 

@@ -1,4 +1,3 @@
-import stat
 import os
 
 from pytest_shutil import cmdline

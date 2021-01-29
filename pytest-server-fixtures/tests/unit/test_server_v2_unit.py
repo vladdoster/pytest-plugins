@@ -1,4 +1,4 @@
-from mock import create_autospec, sentinel, call, patch, Mock
+from mock import sentinel, call, patch
 
 from pytest_server_fixtures.base2 import TestServerV2 as _TestServerV2 # TODO: why as _TestServerV2?
 

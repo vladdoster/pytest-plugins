@@ -1,11 +1,4 @@
-import os
-import tempfile
-import shutil
-import subprocess
-import time
-import errno
 import logging
-import getpass
 
 import pytest
 
