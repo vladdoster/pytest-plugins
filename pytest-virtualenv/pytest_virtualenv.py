@@ -79,7 +79,7 @@ class PackageEntry(object):
     def match(self, package_type):
         if package_type is self.ANY:
                 return True
-        elif package_type is self.REL:
+        if package_type is self.REL:
             if self.isrel:
                 return True
         elif package_type is self.DEV:

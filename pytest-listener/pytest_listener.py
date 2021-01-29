@@ -91,7 +91,7 @@ class Listener(Thread):
             if data == TERMINATOR:
                 self.stop()
                 return
-            elif data == CLEAR:
+            if data == CLEAR:
                 if DEBUG:
                     logger.info('clearing')
                 self.clear_time = time.time()
@@ -147,10 +147,9 @@ class Listener(Thread):
                     logger.info('%s < %s' % (t, self.clear_time))
                     logger.info('discarding cleared %s' % d)
                 return True
-            else:
-                if DEBUG:
-                    logger.info('removed clearing')
-                self.clear_time = None  # unset as we've got one after last clear
+            if DEBUG:
+                logger.info('removed clearing')
+            self.clear_time = None  # unset as we've got one after last clear
         else:
             if DEBUG:
                 logger.info('removed clearing (nmsg with no time)')
