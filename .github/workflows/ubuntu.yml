@@ -25,7 +25,8 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Sanity check
-      run: ls && pwd
+      run: |
+        ls && pwd
     - name: Update Apt-Sources
       run: ./update_apt_sources
     - name: Install System Dependencies
