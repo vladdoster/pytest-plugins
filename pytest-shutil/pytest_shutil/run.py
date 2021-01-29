@@ -145,7 +145,7 @@ def _make_pickleable(fn):
         if self_ is None:  # Python 2 unbound method
             self_ = fn.im_class
         return _invoke_method, (self_, name)
-    elif inspect.isfunction(fn) and fn.__module__ in sys.modules:
+    if inspect.isfunction(fn) and fn.__module__ in sys.modules:
         cls, name = _find_class_from_staticmethod(fn)
         if (cls, name) != (None, None):
             try:
