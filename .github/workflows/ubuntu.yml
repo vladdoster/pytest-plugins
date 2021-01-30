@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DEBUG: 1
-      SERVER_FIXTURES_JENKINS_WAR: cat *.egg-info/top_level.txt  | xargs -Ipysrc coverage run -p --source=pysrc setup.py test -sv -ra || touch ../FAILED-$(basename $PWD) 
+      #SERVER_FIXTURES_JENKINS_WAR: cat *.egg-info/top_level.txt  | xargs -Ipysrc coverage run -p --source=pysrc setup.py test -sv -ra || touch ../FAILED-$(basename $PWD) 
     defaults:
       run:
         shell: bash
